@@ -54,6 +54,3 @@ def echo_all(message):
 	bot.reply_to(message, x)
 
 bot.polling()
-#print(detect_language(u'hi my name is johnson. peterson, ld;sg s gje;qo 4j3q4wkh'))
-#print(detect_language(u'я опасный поцык. к3енб43ж5црбн еуюоб7у.бутю.оер'))
-#print(detect_language(u'мен оте опасңый поцығым'))
