@@ -1,11 +1,19 @@
 import telebot
 import translate
 import json
+import sys
 
 token=''
 
-with open('token.txt', 'r') as f:
+try:
+	f = open('token.txt', 'r')
 	token = f.read()
+except FileNotFoundError:
+	print('ERROR: token.txt does not exist. Create file token.txt in the same directory and'\
+		'place Telegram Bot\'s token there. To get a token write to @botfather')
+	sys.exit()
+else:
+	f.close()
 
 bot = telebot.TeleBot(token)
 
