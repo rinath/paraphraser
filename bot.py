@@ -2,7 +2,10 @@ import telebot
 import translate
 import json
 
-token='993856312:AAH5QCr03mXt73zMmY9Z_pwqaodgCuHQ6Q0'
+token=''
+
+with open('token.txt', 'r') as f:
+	token = f.read()
 
 bot = telebot.TeleBot(token)
 
