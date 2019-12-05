@@ -47,7 +47,7 @@ def send_welcome(message):
 @bot.message_handler(func=lambda message: True)
 def echo_all(message):
 	x = message.text
-	langs = [detect_language(x), 'ko', 'pt', 'tr']
+	langs = [detect_language(x), 'pt', 'tr']
 	for i in range(len(langs)):
 		x = translate.google(x, langs[i], langs[(i+1) % len(langs)])
 	bot.send_message(message.chat.id, 'Please wait, paraphrasing...')
